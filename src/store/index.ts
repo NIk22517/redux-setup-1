@@ -1,5 +1,5 @@
 import { legacy_createStore as createStore, applyMiddleware } from "redux";
-import createSagaMiddleware from "redux-saga";
+// import createSagaMiddleware from "redux-saga";
 import { composeWithDevTools } from "@redux-devtools/extension";
 import { persistStore, persistReducer } from "redux-persist";
 import { createLogger } from "redux-logger";
@@ -19,8 +19,8 @@ const persistedReducers = persistReducer(persistConfig, rootReducer);
 const middlewares: any[] = [];
 
 // create and add the saga middleware
-const sagaMiddleware = createSagaMiddleware();
-middlewares.push(sagaMiddleware);
+// const sagaMiddleware = createSagaMiddleware();
+// middlewares.push(sagaMiddleware);
 
 //add the freeze and logger dev middleware
 if (process.env.NODE_ENV !== "production") {
